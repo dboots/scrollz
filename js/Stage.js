@@ -76,6 +76,8 @@ function Stage(my_config, my_canvas) {
 		ref.drawScenes();
 	};
 
+	//-- Testing issue resolution #7
+
 	this.draw = function() {
 		console.log('draw');
 		var scene = _scenes[_sceneIndex];
