@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<script type="text/javascript" src="js/Stage.js"></script>
+		<script type="text/javascript" src="js/Scene.js"></script>
+		<script type="text/javascript" src="js/Prop.js"></script>
+		<script type="text/javascript" src="js/Video.js"></script>
+		<script type="text/javascript" src="js/Text.js"></script>
+
+		<script type="text/javascript" src="scenes/scene1.js"></script>
+		<script type="text/javascript" src="scenes/scene2.js"></script>
+		<script type="text/javascript" src="scenes/scene3.js"></script>
+
+		<script type="text/javascript">
+			document.addEventListener('DOMContentLoaded', function() {
+				var stage = new Stage({}, 'stage');
+				var scene1 = new Scene(scene1Config, stage.getCanvas());
+				var scene2 = new Scene(scene2Config, stage.getCanvas());
+				var scene3 = new Scene(scene3Config, stage.getCanvas());
+				var scene4 = new Scene(scene1Config, stage.getCanvas());
+
+				stage.addScene(scene1);
+				stage.addScene(scene2);
+				stage.addScene(scene3);
+				stage.addScene(scene4);
+
+				stage.Start();
+			});
+		</script>
+
+		<style type="text/css">
+			body {
+				margin: 0;
+			}
+			canvas {
+				border: 1px solid black;
+			}
+
+			#frame {
+				width: 50px;
+				height: 50px;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				border: 1px solid red;
+				background: white;
+				font-size: 30px;
+				text-align: center;
+			}
+		</style>
+	</head>
+
+	<body>
+		<canvas id="stage"></canvas>
+		<div id="frame"></div>
+	</body>
+</html>
